@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    
+</head>
+<body>
+    <div class="background" id="background">
+
+        <div class="card nav">
+            <p class="navtext">明日方舟</p>
+            <p class="navtext">卡涅利安三技能技能期DPS计算</p>
+        </div>
+
+        <div class="card content">
+            <div class="content-left">
+            <div class= "controller">
+                <div class="controller-item"><p>攻击力</p><input id="input_atk" type="range" min="500" max="2000" value="855" step="5" oninput="output_atk.value=this.value" onchange="updateResult()"/><output id="output_atk" for="input_atk">855</output></div>
+                <div class="controller-item"><p>攻击间隔</p><input id="input_atk_interval" type="range" min="0.1" max="4" value="2" step="0.1" oninput="output_atk_interval.value=this.value" onchange="updateResult()"/><output id="output_atk_interval" for="input_atk_interval">2</output></div>
+                <div class="controller-item"><p>每秒攻击力提升</p><input id="input_atk_boost" type="range" min="0" max="1" value="0.05" step="0.05" oninput="output_atk_boost.value=this.value" onchange="updateResult()"/><output id="output_atk_boost" for="input_atk_boost">0.05</output></div>
+                <div class="controller-item"><p>每层印记伤害提升</p><input id="input_dmg_buff" type="range" min="0" max="2" value="0.1" step="0.1" oninput="output_dmg_buff.value=this.value" onchange="updateResult()"/><output id="output_dmg_buff" for="input_dmg_buff">0.1</output></div>
+                <div class="controller-item"><p>最大印记层数</p><input id="input_max_buff_stack" type="range" min="0" max="10" value="5" step="1" oninput="output_max_buff_stack.value=this.value" onchange="updateResult()"/><output id="output_max_buff_stack" for="input_max_buff_stack">5</output></div>
+                <div class="controller-item"><p>技能持续时间</p><input id="input_skill_duration" type="range" min="0" max="120" value="30" step="1" oninput="output_skill_duration.value=this.value" onchange="updateResult()"/><output id="output_skill_duration" for="input_skill_duration">30</output></div>
+            </div>
+
+            <div class= "result">
+                <p id="result_total_dmg">技能期总伤为： </p>
+                <p id="result_dps">技能期DPS为： </p>
+            </div>
+            </div>
+
+            
+        </div>
+    </div>
+    
+</body>
+<script src="/js/script.js" type="text/javascript"></script>
+</html>
